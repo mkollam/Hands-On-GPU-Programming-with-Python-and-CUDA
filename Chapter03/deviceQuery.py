@@ -18,8 +18,8 @@ for i in range(drv.Device.count()):
     # in the original deviceQuery.
     # We set up a dictionary as such so that we can easily index
     # the values using a string descriptor.
-    
-    device_attributes_tuples = gpu_device.get_attributes().iteritems() 
+    # in python3.6  above iteritems() is changed ti items()
+    device_attributes_tuples = gpu_device.get_attributes().items() 
     device_attributes = {}
     
     for k, v in device_attributes_tuples:
